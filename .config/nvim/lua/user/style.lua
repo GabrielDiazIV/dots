@@ -14,6 +14,12 @@ local ok, fox  = pcall(require, "nightfox")
 if not ok then
 	return
 end
+
+fox.setup({
+ palettes = { 
+    carbonfox = {bg0 = "#000000", bg1 = "#000000"}
+ }
+})
 vim.cmd[[colorscheme carbonfox]]
 
 local status_ok, gitsigns = pcall(require, "gitsigns")

@@ -82,6 +82,9 @@ return packer.startup(function(use)
 	use { "hrsh7th/cmp-buffer" }
 	use { "hrsh7th/vim-vsnip" }
 
+  -- python notebook this is soo annoying
+  -- use { 'luk400/vim-jukit'  }
+
 	-- Editor config
 	use { 'editorconfig/editorconfig-vim' }
 

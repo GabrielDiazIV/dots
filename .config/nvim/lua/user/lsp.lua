@@ -116,7 +116,6 @@ local default_config = {
   capabilites = cmp_lsp.default_capabilities()
 } 
 
-
 local go_attach = function (client, bufnr)
   on_attach(client, bufnr)
   local ok, go = pcall(require, "go")
@@ -128,6 +127,7 @@ local go_attach = function (client, bufnr)
   go.setup()
 end
 
+
 --  https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local servers = {
 	tsserver = default_config,
@@ -135,6 +135,7 @@ local servers = {
 	pyright = default_config,
 	rust_analyzer = default_config,
 	prismals = default_config,
+  texlab = default_config,
 
 	gopls = { 
 		on_attach = go_attach,
@@ -157,5 +158,5 @@ for k, v  in pairs(servers) do
 end
 
 -- special vars
-vim.go.rustfmt_autosave = 1;
-vim.go.astro_typescript = 'enabled';
+--  vim.go.rustfmt_autosave = 1;
+-- vim.go.astro_typescript = 'enabled';

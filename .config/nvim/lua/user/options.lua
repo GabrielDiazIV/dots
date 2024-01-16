@@ -39,6 +39,7 @@ local options = {
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   wildmenu = true,
   spelllang = "en",                          -- spelling to english
+
 }
 
 for k, v in pairs(options) do
@@ -46,7 +47,9 @@ for k, v in pairs(options) do
 end
 
 -- vim.cmd[[let g:ranger_replace_netrw = 1]]                   -- netrw banner 
-vim.cmd[[let g:rnvimr_enable_picker = 1]]
+vim.cmd[[let g:netrw_banner = 0 ]]
+vim.cmd[[let g:netrw_liststyle = 3]]
+-- vim.cmd[[let g:rnvimr_enable_picker = 1]]
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append "-"                           -- hyphenated words recognized by searches

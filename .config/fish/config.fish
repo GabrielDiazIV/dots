@@ -4,7 +4,7 @@ end
 
 source /opt/asdf-vm/asdf.fish
 
-alias fuck=thefuck
+thefuck --alias | source 
 alias dust='dust -r'
 alias polylaunch='~/.config/polybar/launch.sh'
 alias dots='git --git-dir=$HOME/workplace/dots --work-tree=$HOME'
